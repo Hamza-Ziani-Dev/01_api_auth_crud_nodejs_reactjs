@@ -23,9 +23,7 @@ function Home() {
 
   const onAddSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:3001/api/users", form)
-      .then((res) => {
+    axios.post("http://localhost:3001/api/users", form).then((res) => {
         setMessage(res.data.message);
         /* hide form after save */
         setForm({});
